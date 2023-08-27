@@ -1,0 +1,54 @@
+*{
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #645e5e;
+}
+
+div{
+    width: 130px;
+}
+.flow{
+    width: 0%;
+    overflow: hidden;
+    white-space:nowrap;
+    color: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 2px;
+    border-right: 2px solid white;
+    padding-right: 2px;
+    animation: blink_cursor 0.5s step-end infinite ,type_effect 1s steps(11,end) infinite;
+}
+
+@keyframes blink_cursor{
+    0%{
+        border-right: transparent;
+    }
+    50%{
+        border-right: 2px solid white;
+    }
+    100%{
+        border-right: transparent;
+    }
+}
+
+@keyframes type_effect{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 20%;
+    }
+}
